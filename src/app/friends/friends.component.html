@@ -1,0 +1,26 @@
+<div>
+	<article>
+		<h1>{{ firstOptionTitle }}</h1>
+		<p>{{ firstOptionText }}</p>
+		<input type="button" value="{{ firstOptionButton }}" (click)="viewFriends()" />
+	</article>	
+	<article>
+		<h1>{{ secondOptionTitle }}</h1>
+		<p>{{ secondOptionText }}</p>
+		<input type="text" placeholder="{{ secondOptionTextRequire }}" #friendToAdd />
+		<input type="button" value="{{ secondOptionButton }}" (click)="addFriend(friendToAdd.value)" />
+	</article>	
+	<article>
+		<h1>{{ thirdOptionTitle }}</h1>
+		<p>{{ thirdOptionText }}</p>
+		<input type="text" placeholder="{{ thirdOptionTextRequire }}" #friendToRemove />
+		<input type="button" value="{{ thirdOptionButton }}" (click)="removeFriend(friendToRemove.value)" />
+	</article>			
+</div>
+
+<div class="imageSet">
+	<div *ngFor="let friend of friends" class="card">
+		<img [src]="'https://i.pravatar.cc/150?u=' + myEncode(friend.name)" />
+		<p>{{ friend.name }}</p>
+	</div>
+</div>
