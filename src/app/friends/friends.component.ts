@@ -48,16 +48,16 @@ export class FriendsComponent implements OnInit {
   }
 
   addFriend(nameOfFriend: string): void {
-	//this.preFriends.push({name: nameOfFriend});
+	  //this.preFriends.push({name: nameOfFriend});
   }
   
   removeFriend(name: string): void {
-	/*let index = 0;
-	for (let i = 0; i < this.preFriends.length; i++)
-	{
-		if (this.preFriends[i].name == name) index = i;
-	}
-	this.preFriends.splice(index, 1);*/
+    /*let index = 0;
+    for (let i = 0; i < this.preFriends.length; i++)
+    {
+      if (this.preFriends[i].name == name) index = i;
+    }
+    this.preFriends.splice(index, 1);*/
   }
   
   myEncode(toEncode: string): string {
