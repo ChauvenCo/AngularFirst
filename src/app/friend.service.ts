@@ -13,6 +13,6 @@ export class FriendService {
   constructor(private http: HttpClient) { }
   
   getFriends(): Observable<Friend[]> {
-	return this.http.get<Friend[]>(this.friendURL);
+	  return this.http.get<Friend[]>(this.friendURL);
   }
 }
