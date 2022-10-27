@@ -44,20 +44,7 @@ export class FriendsComponent implements OnInit {
   }
   
   viewFriends(): void {
-	this.friendService.getFriends().subscribe(res => this.friends);
-  }
-
-  addFriend(nameOfFriend: string): void {
-	  //this.preFriends.push({name: nameOfFriend});
-  }
-  
-  removeFriend(name: string): void {
-    /*let index = 0;
-    for (let i = 0; i < this.preFriends.length; i++)
-    {
-      if (this.preFriends[i].name == name) index = i;
-    }
-    this.preFriends.splice(index, 1);*/
+	this.friendService.getFriends().subscribe(res => this.friends = res.friends);
   }
   
   myEncode(toEncode: string): string {
